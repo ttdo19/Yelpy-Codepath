@@ -165,16 +165,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IYn-Pe-PPy">
-                                <rect key="frame" x="0.0" y="82" width="414" height="321"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IYn-Pe-PPy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="db7-Fs-cD9"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWX-gN-OHx">
+                                <rect key="frame" x="20" y="218" width="319" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n08-uv-X2v">
+                                <rect key="frame" x="10" y="253" width="175" height="18"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVw-5C-7C5">
+                                <rect key="frame" x="20" y="270" width="70.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35n-06-IWZ">
+                                <rect key="frame" x="20" y="301" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Review" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4x-Md-bSH">
+                                <rect key="frame" x="225" y="250" width="156" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NLC-gO-7ws"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="35n-06-IWZ" firstAttribute="top" secondItem="tVw-5C-7C5" secondAttribute="bottom" constant="10" id="0fQ-X0-VGt"/>
+                            <constraint firstItem="qWX-gN-OHx" firstAttribute="top" secondItem="NLC-gO-7ws" secondAttribute="top" constant="170" id="5BZ-Ws-29B"/>
+                            <constraint firstItem="tVw-5C-7C5" firstAttribute="leading" secondItem="NLC-gO-7ws" secondAttribute="leading" constant="20" id="7mQ-Bx-4I1"/>
+                            <constraint firstItem="p4x-Md-bSH" firstAttribute="top" secondItem="qWX-gN-OHx" secondAttribute="bottom" constant="10" id="BX7-kk-sud"/>
+                            <constraint firstItem="IYn-Pe-PPy" firstAttribute="leading" secondItem="NLC-gO-7ws" secondAttribute="leading" id="C3R-dh-PWp"/>
+                            <constraint firstItem="n08-uv-X2v" firstAttribute="leading" secondItem="NLC-gO-7ws" secondAttribute="leading" constant="20" id="I5Y-7O-l0R"/>
+                            <constraint firstItem="p4x-Md-bSH" firstAttribute="leading" secondItem="n08-uv-X2v" secondAttribute="trailing" constant="5" id="dc4-mp-5M9"/>
+                            <constraint firstItem="35n-06-IWZ" firstAttribute="leading" secondItem="NLC-gO-7ws" secondAttribute="leading" constant="20" id="gCg-0a-cJA"/>
+                            <constraint firstItem="IYn-Pe-PPy" firstAttribute="trailing" secondItem="NLC-gO-7ws" secondAttribute="trailing" id="grh-NZ-29e"/>
+                            <constraint firstItem="qWX-gN-OHx" firstAttribute="leading" secondItem="NLC-gO-7ws" secondAttribute="leading" constant="20" id="lkg-dB-VqL"/>
+                            <constraint firstItem="tVw-5C-7C5" firstAttribute="top" secondItem="IYn-Pe-PPy" secondAttribute="bottom" constant="20" id="nso-5O-KRt"/>
+                            <constraint firstItem="n08-uv-X2v" firstAttribute="top" secondItem="qWX-gN-OHx" secondAttribute="bottom" constant="10" id="u0m-FP-Xga"/>
+                            <constraint firstItem="IYn-Pe-PPy" firstAttribute="top" secondItem="qDp-0u-TIU" secondAttribute="top" id="wuN-1k-2BS"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="category" destination="tVw-5C-7C5" id="Vk3-m1-PnD"/>
+                        <outlet property="name" destination="qWX-gN-OHx" id="W3q-E0-vHJ"/>
                         <outlet property="restaurantImage" destination="IYn-Pe-PPy" id="3bC-fD-cI5"/>
+                        <outlet property="reviewCount" destination="p4x-Md-bSH" id="vZi-8E-b0c"/>
+                        <outlet property="starsImage" destination="n08-uv-X2v" id="ipQ-Om-lhU"/>
+                        <outlet property="status" destination="35n-06-IWZ" id="9tT-df-QBi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MxK-0q-fc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -203,6 +252,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

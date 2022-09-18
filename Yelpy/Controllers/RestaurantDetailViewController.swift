@@ -11,6 +11,11 @@ import AlamofireImage
 class RestaurantDetailViewController: UIViewController {
     
     @IBOutlet weak var restaurantImage: UIImageView!
+    @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var reviewCount: UILabel!
+    @IBOutlet weak var starsImage: UIImageView!
+    @IBOutlet weak var name: UILabel!
     
     var r: Restaurant!
     
@@ -19,6 +24,13 @@ class RestaurantDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         restaurantImage.af.setImage(withURL: r.imageURL!)
+        restaurantImage.alpha = 0.85
+        restaurantImage.layer.zPosition = -5
+        status.text = r.status ? "Close now" : "Open"
+        category.text = r.mainCategory
+        reviewCount.text = String(r.reviews)
+        name.text = r.name
+        starsImage.image = Stars.dict[r.rating]!
     }
     
 

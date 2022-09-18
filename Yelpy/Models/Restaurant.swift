@@ -16,6 +16,7 @@ class Restaurant {
     var phone: String
     var rating: Double
     var reviews: Int
+    var status: Bool
     
     init(dict: [String: Any]) {
         imageURL = URL(string: dict["image_url"] as! String)
@@ -25,6 +26,7 @@ class Restaurant {
         reviews = dict["review_count"] as! Int
         rating = dict["rating"] as! Double
         mainCategory = Restaurant.getMainCategory(dict: dict)
+        status = dict["is_closed"] as! Bool
     }
     
     static func getMainCategory(dict: [String: Any]) -> String {
